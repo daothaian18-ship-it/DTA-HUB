@@ -1,0 +1,26 @@
+-- loadstring nếu muốn tách file
+local Library = loadstring(game:HttpGet("URL_RAW_CUA_BAN"))()
+
+local Window = Library:CreateWindow({
+    Title = "DTA",
+    Desc = "v1.0",
+    Image = "rbxassetid://123510710343253"
+})
+
+local Tab = Window:AddTab("Main")
+local Group = Tab:AddLeftGroupbox("Section 1")
+
+Group:AddToggle("id1", {
+    Title = "Auto Farm",
+    Default = false,
+    Callback = function(state)
+        print("Auto Farm:", state)
+    end
+})
+
+Group:AddButton({
+    Title = "Click me",
+    Callback = function()
+        print("clicked")
+    end
+})
